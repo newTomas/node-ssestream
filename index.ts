@@ -34,7 +34,7 @@ export type HeaderStream = NodeJS.WritableStream & WriteHeaders
  * If constructed with a HTTP Request, it will optimise the socket for streaming.
  * If this stream is piped to an HTTP Response, it will set appropriate headers.
  */
-export default class SseStream extends Transform {
+export class SseStream extends Transform {
   constructor(req?: IncomingMessage) {
     super({ objectMode: true })
     if (req) {

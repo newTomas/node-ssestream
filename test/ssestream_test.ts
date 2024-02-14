@@ -2,7 +2,7 @@ import assert from 'assert'
 import { Writable } from 'stream'
 import http, { OutgoingHttpHeaders } from 'http'
 import EventSource from 'eventsource'
-import SseStream, { HeaderStream } from '../index'
+import { SseStream, HeaderStream } from '../index'
 import { AddressInfo } from "net"
 
 const written = (stream: Writable) => new Promise((resolve, reject) => stream.on('error', reject).on('finish', resolve))
