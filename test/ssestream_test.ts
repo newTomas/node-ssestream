@@ -96,7 +96,6 @@ data: hello
     sink = new Sink((status: number, headers: OutgoingHttpHeaders) => {
       assert.deepEqual(headers, {
         'Content-Type': 'text/event-stream; charset=utf-8',
-        'Transfer-Encoding': 'identity',
         'Cache-Control': 'no-cache',
         'Connection': 'keep-alive',
       })
